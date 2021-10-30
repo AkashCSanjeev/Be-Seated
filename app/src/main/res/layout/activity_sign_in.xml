@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C3CEDA"
+    tools:context=".Auth.SignIn">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/triangular" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailEtLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#E6E8F3"
+        app:boxBackgroundColor="#071330"
+        app:boxStrokeColor="#E6E8F3"
+        app:hintTextColor="#E6E8F3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_marginTop="150dp"
+        android:minHeight="48dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="#E6E8F3"
+            android:textColorHint="#E6E8F3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordEtLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#E6E8F3"
+        app:boxBackgroundColor="#071330"
+        app:boxStrokeColor="#E6E8F3"
+        app:hintTextColor="#E6E8F3"
+        app:layout_constraintEnd_toEndOf="@+id/emailEtLayout"
+        app:layout_constraintStart_toStartOf="@+id/emailEtLayout"
+        app:layout_constraintTop_toBottomOf="@+id/emailEtLayout"
+        android:layout_marginTop="30dp"
+        android:minHeight="48dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="#E6E8F3"
+            android:textColorHint="#E6E8F3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/SignInBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#071330"
+        android:fontFamily="@font/poppins"
+        android:text="Sign In"
+        android:textColor="#E6E8F3"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/passwordEtLayout"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/passwordEtLayout"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEtLayout" />
+
+    <TextView
+        android:id="@+id/forgotPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:clickable="true"
+        android:fontFamily="@font/poppins"
+        android:text="@string/forgot_password"
+        android:textColor="#071330"
+        app:layout_constraintEnd_toEndOf="@+id/passwordEtLayout"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEtLayout" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Welcome Back !!"
+        android:textColor="#071330"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

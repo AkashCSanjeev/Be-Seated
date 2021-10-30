@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#071330"
+    tools:context=".Auth.Verification">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otpETLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:minHeight="48dp"
+        android:textColorHint="#071330"
+        app:boxBackgroundColor="#E6E8F3"
+        app:boxStrokeColor="#071330"
+        app:hintTextColor="#071330"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otpET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Enter the OTP (6 Digit)"
+            android:inputType="number"
+            android:textColor="#071330"
+            android:textColorHint="#071330" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/verifyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#E6E8F3"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Verify"
+        android:textColor="#071330"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/otpETLayout"
+        app:layout_constraintStart_toStartOf="@+id/otpETLayout"
+        app:layout_constraintTop_toBottomOf="@+id/otpETLayout" />
+
+    <TextView
+        android:id="@+id/resendVerificationOtpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/resend_verfication_otp"
+        android:textColor="#E6E8F3"
+        app:layout_constraintEnd_toEndOf="@+id/otpETLayout"
+        app:layout_constraintTop_toBottomOf="@+id/otpETLayout" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mobile" />
+</androidx.constraintlayout.widget.ConstraintLayout>
