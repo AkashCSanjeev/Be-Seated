@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -49,12 +50,16 @@ public class MainActivity extends AppCompatActivity {
 
         binding.recyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
+        binding.progressBar2.setVisibility(View.VISIBLE);
+
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonArrayRequest jsonAbjectRequest = new JsonArrayRequest(Request.Method.GET,
                 "https://delta-inspiration.herokuapp.com/api/restaurants/", null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
+
+                binding.progressBar2.setVisibility(View.GONE);
 
                 try {
 

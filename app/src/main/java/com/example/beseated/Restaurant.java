@@ -4,7 +4,7 @@ public class Restaurant {
 
     String id,url,restName,town,state;
 
-    String bookedTime;
+    String bookedTime,day;
 
     int noOfSeats;
 
@@ -12,17 +12,15 @@ public class Restaurant {
         return id;
     }
 
-    public String getBookedTime() {
-        return bookedTime;
+
+    public String getDay() {
+        return day;
     }
 
-    public int getNoOfSeats() {
-        return noOfSeats;
-    }
-
-    public Restaurant(String bookedTime, int noOfSeats) {
+    public Restaurant(String day, String bookedTime, int noOfSeats) {
         this.bookedTime = bookedTime;
         this.noOfSeats = noOfSeats;
+        this.day = day;
     }
 
     public Restaurant(String town, String state, String restName, String url, String id  ) {
@@ -48,6 +46,14 @@ public class Restaurant {
 
     public String getState() {
         return state;
+    }
+
+    public String getBookedTime() {
+        return bookedTime;
+    }
+
+    public int getNoOfSeats() {
+        return noOfSeats;
     }
 
 

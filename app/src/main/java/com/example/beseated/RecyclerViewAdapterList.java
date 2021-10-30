@@ -51,8 +51,9 @@ public class RecyclerViewAdapterList extends RecyclerView.Adapter<RecyclerViewAd
 
 
 
-        holder.noOfSeats.setText(task.getRestName());
-        holder.time.setText(task.getTown()+" - "+task.getState());
+        holder.noOfSeats.setText(""+task.getNoOfSeats());
+        holder.time.setText(task.getBookedTime());
+        holder.day.setText(task.getDay());
 
 
 
@@ -70,7 +71,7 @@ public class RecyclerViewAdapterList extends RecyclerView.Adapter<RecyclerViewAd
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        TextView noOfSeats,time;
+        TextView noOfSeats,time,day;
 
 
         public ViewHolder(View itemView) {
@@ -79,6 +80,7 @@ public class RecyclerViewAdapterList extends RecyclerView.Adapter<RecyclerViewAd
 
             noOfSeats = itemView.findViewById(R.id.bookedSeats);
             time = itemView.findViewById(R.id.bookedTime);
+            day = itemView.findViewById(R.id.day);
 
 
 

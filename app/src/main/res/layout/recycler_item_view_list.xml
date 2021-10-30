@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:fontFamily="@font/poppins"
-        android:text="2"
+        tools:text="2"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -55,9 +55,19 @@
         android:id="@+id/bookedTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/poppins"
-        android:text="time"
+        app:layout_constraintEnd_toEndOf="@+id/BookedTimings"
+        app:layout_constraintStart_toStartOf="@+id/BookedTimings"
+        app:layout_constraintTop_toBottomOf="@+id/day"
+        tools:text="time" />
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        tools:text="day"
         app:layout_constraintEnd_toEndOf="@+id/BookedTimings"
         app:layout_constraintStart_toStartOf="@+id/BookedTimings"
         app:layout_constraintTop_toBottomOf="@+id/BookedTimings" />

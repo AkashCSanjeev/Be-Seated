@@ -44,13 +44,15 @@ public class Details extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("AuthToken",MODE_PRIVATE);
 
+        binding.progressBar3.setVisibility(View.VISIBLE);
+
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonAbjectRequest = new JsonObjectRequest(Request.Method.GET,
                 "https://delta-inspiration.herokuapp.com/api/restaurant/"+id+"/", null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-
+                binding.progressBar3.setVisibility(View.GONE);
                 try {
 
 

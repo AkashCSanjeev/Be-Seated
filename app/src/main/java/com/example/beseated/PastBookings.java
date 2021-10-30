@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -33,7 +34,7 @@ import java.util.Map;
 public class PastBookings extends AppCompatActivity {
 
     ActivityPastBookingsBinding binding;
-    RecyclerViewAdapterList recyclerViewAdapter;
+    RecyclerViewAdapterList recyclerViewAdapter1;
     List<Restaurant> restaurants;
 
     @Override
@@ -45,6 +46,8 @@ public class PastBookings extends AppCompatActivity {
         restaurants = new ArrayList<>();
         SharedPreferences sharedPreferences = getSharedPreferences("AuthToken",MODE_PRIVATE);
 
+        binding.progressBar.setVisibility(View.VISIBLE);
+
         binding.recyclerViewList.setLayoutManager(new LinearLayoutManager(this));
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
@@ -54,7 +57,7 @@ public class PastBookings extends AppCompatActivity {
             public void onResponse(JSONObject response) {
 
                 try {
-
+                    binding.progressBar.setVisibility(View.GONE);
                     JSONArray arr = response.getJSONArray("data");
                     Log.d("time","inside");
 
@@ -70,7 +73,7 @@ public class PastBookings extends AppCompatActivity {
 
                         Log.d("time",weekday+" "+time);
 
-                        restaurants.add(new Restaurant(obj.getString("timing"), obj.getInt("cart_items") ));
+                        restaurants.add(new Restaurant(weekday,time, obj.getInt("cart_items") ));
 
                     }
                 } catch (JSONException | ParseException e) {
@@ -78,8 +81,8 @@ public class PastBookings extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                recyclerViewAdapter = new RecyclerViewAdapterList(PastBookings.this,restaurants,sharedPreferences.getString("token",""),R.layout.recycler_item_view_list);
-                binding.recyclerViewList.setAdapter(recyclerViewAdapter);
+                recyclerViewAdapter1 = new RecyclerViewAdapterList(PastBookings.this,restaurants,sharedPreferences.getString("token",""),R.layout.recycler_item_view_list);
+                binding.recyclerViewList.setAdapter(recyclerViewAdapter1);
 
 
             }
@@ -88,7 +91,7 @@ public class PastBookings extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Log.d("VolleyDebug","Error retrieving data");
                 Log.d("VolleyDebug",error.toString());
-                Log.d("VolleyDebug",error.networkResponse.toString());
+//                Log.d("VolleyDebug",error.networkResponse.toString());
 
 
             }
