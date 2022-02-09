@@ -86,7 +86,7 @@ public class SignUp extends AppCompatActivity {
                 Log.d("POST",postData.toString());
                 RequestQueue requestQueue = Volley.newRequestQueue(SignUp.this);
                 JsonObjectRequest jsonAbjectRequest = new JsonObjectRequest(Request.Method.POST,
-                        "https://delta-inspiration.herokuapp.com/api/signup/", postData, new Response.Listener<JSONObject>() {
+                        "https://inspiration-2021-backend.herokuapp.com/api/signup/", postData, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
 

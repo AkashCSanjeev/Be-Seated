@@ -55,7 +55,7 @@ public class ForgotPassword extends AppCompatActivity {
                 Log.d("POST",postData.toString());
                 RequestQueue requestQueue = Volley.newRequestQueue(ForgotPassword.this);
                 JsonObjectRequest jsonAbjectRequest = new JsonObjectRequest(Request.Method.POST,
-                        "https://delta-inspiration.herokuapp.com/api/reset/", postData, new Response.Listener<JSONObject>() {
+                        "https://inspiration-2021-backend.herokuapp.com/api/reset/", postData, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
 

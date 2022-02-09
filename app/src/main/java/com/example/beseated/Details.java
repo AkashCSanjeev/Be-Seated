@@ -49,7 +49,7 @@ public class Details extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonAbjectRequest = new JsonObjectRequest(Request.Method.GET,
-                "https://delta-inspiration.herokuapp.com/api/restaurant/"+id+"/", null, new Response.Listener<JSONObject>() {
+                "https://inspiration-2021-backend.herokuapp.com/api/restaurant/"+id+"/", null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 binding.progressBar3.setVisibility(View.GONE);

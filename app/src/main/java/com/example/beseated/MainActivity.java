@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonArrayRequest jsonAbjectRequest = new JsonArrayRequest(Request.Method.GET,
-                "https://delta-inspiration.herokuapp.com/api/restaurants/", null, new Response.Listener<JSONArray>() {
+                "https://inspiration-2021-backend.herokuapp.com/api/restaurants/", null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
 

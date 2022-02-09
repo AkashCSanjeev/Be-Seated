@@ -91,7 +91,7 @@ public class Booking extends AppCompatActivity {
                 Log.d("POST",postData.toString());
                 RequestQueue requestQueue = Volley.newRequestQueue(Booking.this);
                 JsonObjectRequest jsonAbjectRequest = new JsonObjectRequest(Request.Method.POST,
-                        "https://delta-inspiration.herokuapp.com/api/booking/", postData, new Response.Listener<JSONObject>() {
+                        "https://inspiration-2021-backend.herokuapp.com/api/booking/", postData, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
 

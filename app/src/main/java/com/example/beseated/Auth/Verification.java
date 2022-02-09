@@ -55,7 +55,7 @@ public class Verification extends AppCompatActivity {
                 Log.d("POST",postData.toString());
                 RequestQueue requestQueue = Volley.newRequestQueue(Verification.this);
                 JsonObjectRequest jsonAbjectRequest = new JsonObjectRequest(Request.Method.POST,
-                        "https://delta-inspiration.herokuapp.com/api/verify/", postData, new Response.Listener<JSONObject>() {
+                        "https://inspiration-2021-backend.herokuapp.com/api/verify/", postData, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
 

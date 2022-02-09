@@ -52,7 +52,7 @@ public class PastBookings extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonAbjectRequest = new JsonObjectRequest(Request.Method.GET,
-                "https://delta-inspiration.herokuapp.com/api/past-bookings/", null, new Response.Listener<JSONObject>() {
+                "https://inspiration-2021-backend.herokuapp.com/api/past-bookings/", null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
